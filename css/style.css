@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    /* font-size: 1.2vw; */
+    font-size: 1em;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    /* pour le background */
+    background-image: url('../images/landscape.jpg');
+    /* on lui dit de couvrir l'écran */
+    background-size: cover;
+    /* Le header à une taille maximale d'écran */
+    height: 100vh;
+    width: 100vw;
+}
+
+nav.navbar {
+    /* la navbar prend 100% */
+    width: 100%;
+    /* Elle est en position absolute pour se mettre au dessus du background */
+    position: absolute;
+    /* on lui donne une marge intérieure de 50 px */
+    padding: 50px;
+    /* On dispose ses enfants horizontalement */
+    display: flex;
+    /* On les espace, un à chaque extrèmité */
+    justify-content: space-between;
+    /* On les align verticalement */
+    align-items: center;
+    /* TODO : Etudier cette propriété */
+    box-sizing: border-box;
+}
+
+nav.navbar a {
+    /* On met les liens en blancs */
+    color: white;
+}
+
+/* On met en forme le logo */
+nav.navbar a.logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+nav.navbar div.nav-links ul {
+    /* On dispose les liens li de la navbar horizontalement */
+    display: flex;
+}
+
+nav.navbar div.nav-links ul li {
+    /* on donne un peu de marge sur les côtés aux éléments du li pour qu'ils aient de l'espace entre eux */
+    margin: 0 25px;
+}
+
+nav.navbar div.nav-links ul li.active a {
+    /* Le lien actif */
+    font-weight: 600;
+    color: red;
+}
+
+nav.navbar img.menu-hamburger {
+    /* L'image du menu hamburger */
+    position: absolute;
+    /* On le positionne en haut à droite */
+    top: 50px;
+    right: 50px;
+    /* On lui donne une taille de 35px */
+    width: 35px;
+    /* On le cache (on ne l'affiche que dans le media queries */
+    display: none;
+}
+
+/* A partir de 900px de large */
+@media screen and (max-width: 900px) {
+
+    /* on enlève le padding de la navbar (car on veut occuper tout l'écran */
+    nav.navbar {
+        padding: 0;
+    }
+
+    nav.navbar a.logo {
+        position: absolute;
+        top: 40px;
+        left: 50px;
+    }
+
+    /* La navbar va occuper la totalité de l'écran et est centrée */
+    nav.navbar div.nav-links {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.466);
+        backdrop-filter: blur(5px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* Permet de cacher le menu mobile à gauche */
+        margin-left: -100%;
+        /* Pour faire une transition */
+        transition: all 0.5s ease;
+    }
+
+    /* Quand la classe mobile-menu est ajouté au div, on montre la navbar */
+    /* /!\ => A ajouter toujours après le "nav.navbar div.nav-links" */
+    nav.navbar div.mobile-menu {
+        margin-left: 0;
+    }
+
+    /* On affiche les ul en columns et on centre */
+    nav.navbar div.nav-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav.navbar div.nav-links ul li {
+        /* on donne un peu de marge sur les côtés aux éléments du li pour qu'ils aient de l'espace entre eux */
+        margin: 25px 0px;
+        font-size: 1.2rem;
+    }
+
+    /* On affiche le menu hamburger */
+    nav.navbar img.menu-hamburger {
+        display: block;
+    }
+}
