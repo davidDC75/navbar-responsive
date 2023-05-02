@@ -10,20 +10,28 @@
 <body>
 
     <nav class="navbar">
-            <a href="#" class="logo">ADVENTURE</a>
+            <a href="#" class="logo">Le musem</a>
             <div class="nav-links">
                 <ul>
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Adventures</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Infos</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li class="active"><a href="#header">Accueil</a></li>
+                    <li><a href="#expositions">Expositions</a></li>
+                    <li><a href="#billeterie">Billeterie</a></li>
+                    <li><a href="#infos">Infos</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <img src="./images/menu-btn.png" alt="bouton menu hamburger" class="menu-hamburger">
     </nav>
-
-    <header></header>
+    <a href="#expositions" class="header-anchor"><span class="material-symbols-outlined">arrow_circle_down</span></a>
+    <header id="header"></header>
+    <main>
+        <section id="expositions">
+            <a href="#billeterie" class="expositions-anchor"><span class="material-symbols-outlined">arrow_circle_down</span></a>
+        </section>
+        <section id="billeterie">
+            <a href="#infos" class="infos-anchor"><span class="material-symbols-outlined">arrow_circle_down</span></a>
+        </section>
+    </main>
     <script src="./js/main.js"></script>
 </body>
 </html>
