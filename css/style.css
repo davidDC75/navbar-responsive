@@ -197,9 +197,19 @@ section#expositions {
     background-size: cover;
 }
 
+section#expositions h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 8px 8px 8px #0A0B17;
+    position: absolute;
+    top: 5%;
+    color: white;
+}
+
 div#carousel-container {
     position: absolute;
-    top: calc(50% - 215px);
+    top: calc(40% - 215px);
     left: calc(50% - 322px);
     overflow: hidden;
     border: 1px solid white;
