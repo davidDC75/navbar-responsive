@@ -226,29 +226,6 @@ div.carousel {
     animation-iteration-count: infinite;
 }
 
-@keyframes carousel-expo {
-    0%,
-    16% {
-        transform: translate(-100%);
-    }
-    20%,
-    36% {
-        transform: translate(-200%);
-    }
-    40%,
-    56% {
-        transform: translate(-300%);
-    }
-    60%,
-    76% {
-        transform: translate(-400%);
-    }
-    80%,
-    96% {
-        transform: translate(-500%);
-    }
-}
-
 div.carousel > img {
     width: 644px;
     height: 430px;
@@ -271,6 +248,33 @@ section#billeterie {
     height: 100vh;
     background-image: url('../images/background/bois.jpg');
     background-size: cover;
+}
+
+/*****************************
+    KEYFRAMES POUR ANIMATION
+*****************************/
+
+@keyframes carousel-expo {
+    0%,
+    16% {
+        transform: translate(-100%);
+    }
+    20%,
+    36% {
+        transform: translate(-200%);
+    }
+    40%,
+    56% {
+        transform: translate(-300%);
+    }
+    60%,
+    76% {
+        transform: translate(-400%);
+    }
+    80%,
+    96% {
+        transform: translate(-500%);
+    }
 }
 
 /* A partir de 900px de large */
@@ -340,4 +344,21 @@ section#billeterie {
         text-shadow: 8px 8px 8px #0A0B17;
         color: white;
     }
+
+    /**********************
+        SECTION EXPOSITIONS
+    ***********************/
+
+    div#carousel-container {
+        top: calc(45% - 183px);
+        left: calc(50% - 275px);
+        width: 550px;
+        height: 367px;
+    }
+
+    div.carousel > img {
+        width: 550px;
+        height: 367px;
+    }
+    
 }
