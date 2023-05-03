@@ -32,66 +32,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/***************
-    HEADER
-***************/
-
-header {
-    /* pour le background */
-    background-image: url('../images/statue.jpg');
-    /* on lui dit de couvrir l'écran */
-    background-size: cover;
-    /* Le header à une taille maximale d'écran */
-    height: 100vh;
-    width: 100vw;
-}
-
-div#header-content {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    width: 56vw;
-    height: 26vh;
-    top: calc(50% - 13vh);
-    left: 20%;
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-h1 {
-    font-size: 4rem;
-    text-shadow: 8px 8px 8px #0A0B17;
-    color: white;
-}
-
-svg.svg-billet {
-    width: 1.5em;
-    height: 1.5em;
-    fill: white;
-    vertical-align: middle;
-}
-
-a.billeterie-link {
-    white-space: nowrap;
-    margin-top: 20px;
-    text-align: center;
-    line-height: 10vh;
-    font-size: 1rem;
-    color: white;
-    width: 25vw;
-    height: 10vh;
-    background-color: blue;
-    box-sizing: border-box;
-    border-radius: 10px;
-    transition: all 0.5s ease-in-out;
-}
-
-a.billeterie-link:hover {
-    transform: rotate(-3deg);
-}
-
 /**********
     NAVBAR
 ***********/
@@ -150,6 +90,66 @@ nav.navbar img.menu-hamburger {
     /* On le cache (on ne l'affiche que dans le media queries */
     display: none;
     z-index: 1001;
+}
+
+/***************
+    HEADER
+***************/
+
+header {
+    /* pour le background */
+    background-image: url('../images/statue.jpg');
+    /* on lui dit de couvrir l'écran */
+    background-size: cover;
+    /* Le header à une taille maximale d'écran */
+    height: 100vh;
+    width: 100vw;
+}
+
+div#header-content {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 56vw;
+    height: 26vh;
+    top: calc(50% - 13vh);
+    left: 20%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+h1 {
+    font-size: 4rem;
+    text-shadow: 8px 8px 8px #0A0B17;
+    color: white;
+}
+
+svg.svg-billet {
+    width: 1.5em;
+    height: 1.5em;
+    fill: white;
+    vertical-align: middle;
+}
+
+a.billeterie-link {
+    white-space: nowrap;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 10vh;
+    font-size: 1rem;
+    color: white;
+    width: 25vw;
+    height: 10vh;
+    background-color: blue;
+    box-sizing: border-box;
+    border-radius: 24px;
+    box-shadow: 3px 3px 8px #444444;
+}
+
+a.billeterie-link:hover {
+    box-shadow: 1px 1px 4px #777777;
 }
 
 /* Ancre header */
@@ -258,27 +258,5 @@ section#billeterie {
         font-size: 2.6rem;
         text-shadow: 8px 8px 8px #0A0B17;
         color: white;
-    }
-    
-    svg.svg-billet {
-        width: 1.5em;
-        height: 1.5em;
-        fill: white;
-        vertical-align: middle;
-    }
-    
-    a.billeterie-link {
-        white-space: nowrap;
-        margin-top: 20px;
-        text-align: center;
-        line-height: 10vh;
-        font-size: 1rem;
-        color: white;
-        width: 25vw;
-        height: 10vh;
-        background-color: blue;
-        box-sizing: border-box;
-        border-radius: 10px;
-        transition: all 0.5s ease-in-out;
     }
 }
