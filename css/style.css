@@ -152,6 +152,20 @@ a.billeterie-link:hover {
     box-shadow: 1px 1px 4px #777777;
 }
 
+div#header-content-bottom {
+    position: absolute;
+    top: 90vh;
+    left: 10vw;
+    background-color: rgba(0, 0, 0, 0.288);
+}
+
+div#header-content-bottom span {
+    padding: 5px 10px 5px 10px;
+    font-size: 1.2rem;
+    text-shadow: 8px 8px 8px #0A0B17;
+    color: white;
+}
+
 /* Ancre header */
 a.header-anchor {
     position: absolute;
