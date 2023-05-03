@@ -62,10 +62,19 @@ div#header-content {
 
 h1 {
     font-size: 4rem;
+    text-shadow: 8px 8px 8px #0A0B17;
     color: white;
 }
 
+svg.svg-billet {
+    width: 1.5em;
+    height: 1.5em;
+    fill: white;
+    vertical-align: middle;
+}
+
 a.billeterie-link {
+    white-space: nowrap;
     margin-top: 20px;
     text-align: center;
     line-height: 10vh;
@@ -140,6 +149,7 @@ nav.navbar img.menu-hamburger {
     width: 35px;
     /* On le cache (on ne l'affiche que dans le media queries */
     display: none;
+    z-index: 1001;
 }
 
 /* Ancre header */
@@ -209,6 +219,7 @@ section#billeterie {
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 1000;
 
         /* Permet de cacher le menu mobile à gauche */
         margin-left: -100%;
@@ -237,5 +248,37 @@ section#billeterie {
     /* On affiche le menu hamburger */
     nav.navbar img.menu-hamburger {
         display: block;
+    }
+
+    /*****************
+        SECTION HEADER
+    ******************/
+
+    h1 {
+        font-size: 2.6rem;
+        text-shadow: 8px 8px 8px #0A0B17;
+        color: white;
+    }
+    
+    svg.svg-billet {
+        width: 1.5em;
+        height: 1.5em;
+        fill: white;
+        vertical-align: middle;
+    }
+    
+    a.billeterie-link {
+        white-space: nowrap;
+        margin-top: 20px;
+        text-align: center;
+        line-height: 10vh;
+        font-size: 1rem;
+        color: white;
+        width: 25vw;
+        height: 10vh;
+        background-color: blue;
+        box-sizing: border-box;
+        border-radius: 10px;
+        transition: all 0.5s ease-in-out;
     }
 }
