@@ -93,6 +93,15 @@ nav.navbar img.menu-hamburger {
     z-index: 1001;
 }
 
+/* Les ancres en bas au milieu de l'écran */
+a.bottom-anchor {
+    position: absolute;
+    left: 50vw;
+    top: 93vh;
+    font-size: 2rem;
+    color: black;
+}
+
 /***************
     HEADER
 ***************/
@@ -175,15 +184,6 @@ a.header-link-to-expos:hover {
     text-decoration: underline;
 }
 
-/* Ancre header */
-a.header-anchor {
-    position: absolute;
-    left: 50vw;
-    top: 93vh;
-    font-size: 2rem;
-    color: black;
-}
-
 /**********************
     SECTION EXPOSITIONS
 ***********************/
@@ -231,14 +231,6 @@ div.carousel > img {
     width: 644px;
     height: 430px;
     flex-shrink: 0;
-}
-
-a.expositions-anchor {
-    position: absolute;
-    left: 50vw;
-    top: 93vh;
-    font-size: 2rem;
-    color: black;
 }
 
 /**********************
