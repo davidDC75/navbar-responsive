@@ -89,6 +89,7 @@ nav.navbar img.menu-hamburger {
     width: 35px;
     /* On le cache (on ne l'affiche que dans le media queries */
     display: none;
+    /* On met le bouton hamburger au dessus de tout */
     z-index: 1001;
 }
 
@@ -98,7 +99,7 @@ nav.navbar img.menu-hamburger {
 
 header {
     /* pour le background */
-    background-image: url('../images/statue.jpg');
+    background-image: url('../images/background/statue.jpg');
     /* on lui dit de couvrir l'écran */
     background-size: cover;
     /* Le header à une taille maximale d'écran */
@@ -191,9 +192,56 @@ section#expositions {
     width: 100vw;
     height: 100vh;
     /* pour le background */
-    background-image: url('../images/champollion.jpg');
+    background-image: url('../images/background/champollion.jpg');
     /* on lui dit de couvrir l'écran */
     background-size: cover;
+}
+
+div#carousel-container {
+    position: absolute;
+    top: calc(50% - 215px);
+    left: calc(50% - 322px);
+    overflow: hidden;
+    border: 1px solid white;
+    width: 644px;
+    height: 430px;
+}
+
+div.carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    animation-name: carousel-expo;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes carousel-expo {
+    0%,
+    16% {
+        transform: translate(-100%);
+    }
+    20%,
+    36% {
+        transform: translate(-200%);
+    }
+    40%,
+    56% {
+        transform: translate(-300%);
+    }
+    60%,
+    76% {
+        transform: translate(-400%);
+    }
+    80%,
+    96% {
+        transform: translate(-500%);
+    }
+}
+
+div.carousel > img {
+    width: 644px;
+    height: 430px;
 }
 
 a.expositions-anchor {
@@ -211,7 +259,7 @@ section#billeterie {
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-image: url('../images/bois.jpg');
+    background-image: url('../images/background/bois.jpg');
     background-size: cover;
 }
 
@@ -241,6 +289,7 @@ section#billeterie {
         display: flex;
         justify-content: center;
         align-items: center;
+        /* On met la fenêtre juste en dessous du bouton hamburger */
         z-index: 1000;
 
         /* Permet de cacher le menu mobile à gauche */
