@@ -155,7 +155,7 @@ a.billeterie-link:hover {
 div#header-content-bottom {
     position: absolute;
     top: 90vh;
-    left: 10vw;
+    left: 5vw;
     background-color: rgba(0, 0, 0, 0.288);
 }
 
@@ -164,6 +164,14 @@ div#header-content-bottom span {
     font-size: 1.2rem;
     text-shadow: 8px 8px 8px #0A0B17;
     color: white;
+}
+
+a.header-link-to-expos {
+    color: white;
+}
+
+a.header-link-to-expos:hover {
+    text-decoration: underline;
 }
 
 /* Ancre header */
