@@ -224,11 +224,13 @@ div.carousel {
     animation-name: carousel-expo;
     animation-duration: 20s;
     animation-iteration-count: infinite;
+    animation-fill-mode: both;
 }
 
 div.carousel > img {
     width: 644px;
     height: 430px;
+    flex-shrink: 0;
 }
 
 a.expositions-anchor {
@@ -254,26 +256,31 @@ section#billeterie {
     KEYFRAMES POUR ANIMATION
 *****************************/
 
+/* 80% / 5 = 16%
+    20 / 5 = 4% */
 @keyframes carousel-expo {
-    0%,
+    from,
     16% {
-        transform: translate(-100%);
+        transform: translateX(0%);
     }
     20%,
     36% {
-        transform: translate(-200%);
+        transform: translateX(-100%);
     }
     40%,
     56% {
-        transform: translate(-300%);
+        transform: translateX(-200%);
     }
     60%,
     76% {
-        transform: translate(-400%);
+        transform: translateX(-300%);
     }
     80%,
     96% {
-        transform: translate(-500%);
+        transform: translateX(-400%);
+    }
+    100% {
+        transform: translateX(-500%);
     }
 }
 
